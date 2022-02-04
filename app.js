@@ -21,14 +21,14 @@ url: imgUrl+'a71.jpg'},
 {name:'S21', description:'descr',price: 700, category:'mobile', brand:'Samsung',
 url:imgUrl+'s21.jpg'}
 ]
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
 //res.send(items.sort((a,b)=>a.price-b.price))
 //res.send(items.filter(a=>a.price>500))
 //res.send(items.filter(a=>a.brand==='Samsung'))
 //res.send(items.filter(a=>a.category!='mobile'))
 res.send(items)
 })
-app.get('/total',(req,res)=>{
+app.get('/api/total',(req,res)=>{
 const total=items.reduce((acc,value)=>acc+value.price,0)
 res.send(total.toString())
 })
