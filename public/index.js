@@ -1,6 +1,6 @@
 
 
 //fetch('https://products-diois.herokuapp.com/')
-fetch('/')
+fetch('')
 .then(data=>data.json())
 .then(data=>console.log(data))
