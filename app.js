@@ -4,6 +4,8 @@ var cors = require('cors')
 const port = process.env.PORT||3000
 app.use(cors())
 
+app.use(express.static('public'))
+
 const imgUrl='https://kulhavikruno.000webhostapp.com/diois_img/'
 const items=[
 {name:'iPhone11', description:'descr',price: 4800, category:'mobile', brand:'Apple',
